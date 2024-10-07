@@ -1,3 +1,9 @@
+# Assessment: Forms with Input Fields
+
+*This repo is my solution for the Qualified assessment for 5.3.7*
+
+*Complete App.js and DogForm.js to handle form inputs using React state.*
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
