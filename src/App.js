@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import DogForm from "./DogForm.js";
 
 function App() {
+  const [name, setName] = useState("");
+  const handleNameInput = (event) => {
+    setName(event.target.value);
+  };
+
+  const [breed, setBreed] = useState("");
+  const handleBreedInput = (event) => {
+    setBreed(event.target.value);
+  };
+
+  const [age, setAge] = useState("");
+  const handleAgeInput = (event) => {
+    setAge(event.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <>
+      <h1>New Dog Form</h1>
+      <section>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <strong>Name:</strong> {name}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <p>
+          <strong>Breed:</strong> {breed}
+        </p>
+        <p>
+          <strong>Age:</strong> {age}
+        </p>
+      </section>
+
+      <DogForm
+        name={name}
+        handleNameInput={handleNameInput}
+        breed={breed}
+        handleBreedInput={handleBreedInput}
+        age={age}
+        handleAgeInput={handleAgeInput}
+      />
+    </>
   );
 }
 
